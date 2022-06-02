@@ -7,11 +7,11 @@ h1 {
 }
 
 h2 {
-    font-size: 65px;
+    font-size: 55px;
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
@@ -28,7 +28,6 @@ p {
 }
 
 
-/* Komponenter */
 
 /* Erfaring */
 
@@ -42,14 +41,43 @@ p {
     min-height: 50px;
     width: 100%;
     max-width: 1250px;
-    border: 1px solid red;
+
+    margin-top: 85px;
+
 }
     .erfaring-main-content {
         width: auto;
         max-width: 1000px;
-        border: 1px solid blue;
+    }
+        .tech-row {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
+
+            height: auto;
+            width:  auto;
+        }
+            .python-logo {
+                height: 30px;
+                width: 30px;
+            }
+            .mysql-logo {
+                height: 40px;
+                width: 70px;
+            }
+            .workbench-logo {
+                height: 30px;
+                width: 30px;
+
+                margin-left: 10px;
+            }
+
+    .erfaring-sted {
+        margin: -12.5px 0px 11px 0px;
+        color: rgba(0,0,0,0.5)
     }
 
     .periode {
-        border: 1px solid blue;
+
     }
