@@ -31,13 +31,13 @@ body {
             padding-left: 75px;
         }
             .meny > p {
-                color: rgba(0,0,0,0.5);
+                color: rgb(150,150,150);
                 margin-top: 12.5px;
                 cursor: pointer;
                 transition: 0.25s;
             }
             .meny > p:hover {
-                color: rgba(0,0,0,1);
+                color: rgb(0,0,0);
                 transition: 0.25s;
             }
 

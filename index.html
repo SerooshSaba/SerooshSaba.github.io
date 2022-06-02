@@ -7,7 +7,9 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
-        <script src="script.js" ></script>
+        <script src="script.js" defer></script>
+        <script src="logo-script.js" defer></script>
+
     </head>
 
     <body>
@@ -15,19 +17,19 @@
         <aside>
             <canvas id="canvas" height="500" width="500" ></canvas>
             <div class="meny" >
-                <p>Om</p>
-                <p>Erfaring</p>
-                <p>Utdanning</p>
+                <p id="om-knapp" >Om</p>
+                <p id="erfaring-knapp" >Erfaring</p>
+                <p id="utdanning-knapp" >Utdanning</p>
                 <p>Skills</p>
                 <p>Interesser</p>
             </div>
         </aside>
 
-        <section>
+        <section id="content-area" >
             <main>
                 <div class="content" >
                     
-                    <div class="segment" >
+                    <div id="om-seksjon" class="segment" >
                         <h1>Seroosh <span style="color:rgba(0,0,0,0.5)" >Saba</span></h1>
                         <p class="informasjon" >OSLO - BERGEN - HALDEN - 911 23 725 - SEROOSHSABA@GMAIL.COM</p>
                         
@@ -48,7 +50,7 @@
                         </p>
                     </div>
 
-                    <div class="segment" >
+                    <div id="erfaring-seksjon" class="segment" >
                         <h2>Arbeidserfaring</h2>
                         
                         <div class="erfaring-modul-container" > <!-- PROGRAMMERING 1 -->
@@ -109,6 +111,13 @@
                         <h2 style="margin-top: 75px" >Annen erfaring</h2>
 
                     </div>
+
+
+                    <div id="utdanning-seksjon" class="segment" >
+                        <h2>Utdanning</h2>
+
+                    </div>
+
 
                     <div class="links" >
                         
