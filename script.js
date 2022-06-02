@@ -96,7 +96,7 @@ window.onload = () => {
             ctx.beginPath();
             ctx.moveTo(this.vec1.x + xoff, this.vec1.y + yoff );
             ctx.lineTo(this.vec2.x + xoff, this.vec2.y + yoff );
-            ctx.lineWidth = 3;
+            ctx.lineWidth = 4;
             ctx.strokeStyle = "black";
             ctx.stroke();
         }
@@ -286,7 +286,7 @@ window.onload = () => {
 
     const xoff = 250;
     const yoff = 250;
-    const Z = -300;
+    const Z = -200;
 
     function project( shape ) {
         const N = shape.vectors.length;
@@ -334,7 +334,7 @@ window.onload = () => {
         
         box1.centerRot( 0, 0.025, 0 );
         box2.centerRot( 0, -0.025, 0 );
-        box3.centerRot( 0.025, 0, 0.025 );
+        box3.centerRot( 0.2, 0, 0.5 );
 
         project(box1);
         project(box2);

@@ -6,6 +6,8 @@
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
     font-family: 'Open Sans', sans-serif;
+
+    scroll-behavior: smooth;
 }
 
 body {
@@ -34,7 +36,6 @@ body {
                 cursor: pointer;
                 transition: 0.25s;
             }
-
             .meny > p:hover {
                 color: rgba(0,0,0,1);
                 transition: 0.25s;
@@ -51,7 +52,6 @@ body {
 
         width: 100%;
     }
-
         main {
             display: flex;
             justify-content: flex-start;
@@ -59,18 +59,10 @@ body {
             flex-direction: column;
             height: 100vh;
         }
-
             .content {
                 display: block;
                 height: 1000px;
             }
-            
-            /*
-            .content > div {
-                border: 1px solid red;
-            }
-            */
-
                 .segment {
                     display: flex;
                     justify-content: center;
@@ -81,7 +73,10 @@ body {
                     min-height: 800px;
 
                     padding-left: 50px;
+                
+                    border-bottom: 1px solid rgba(0,0,0,0.25);
                 }
+
 
             .links {
                 height: 250px;
@@ -90,7 +85,7 @@ body {
                 align-items: center;
                 background-color: rgba(0,0,0,0.03);
             }
-                .links > img {
+                .links > a > img {
                     height: 50px;
                     width:  50px;
                     margin: 5px;
@@ -99,22 +94,8 @@ body {
                     transition: 0.1s;
                 }
 
-                .links > img:hover {
+                .links > a > img:hover {
                     opacity: 1;
                     transform: scale(1.05);
                     transition: 0.1s;
                 }
-
-
-.scroll-icon {
-    bottom: 50px;
-    right: 50px;
-
-    position: fixed;
-    height: 50px;
-    width:  50px;
-
-    background-image: url("scroll.PNG");
-    background-size: 100%;
-
-}

@@ -3,11 +3,16 @@ h1, p {
 }
 
 h1 {
-    font-size: 90px;
+    font-size: 85px;
 }
 
 h2 {
-    font-size: 70px;
+    font-size: 65px;
+}
+
+h3 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
 .informasjon {
@@ -19,6 +24,32 @@ h2 {
 
 p {
     width: 75%;
-
-    margin-bottom: 10px;
+    margin-bottom: 17.5px;
 }
+
+
+/* Komponenter */
+
+/* Erfaring */
+
+.erfaring-modul-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+
+    height: auto;
+    min-height: 50px;
+    width: 100%;
+    max-width: 1250px;
+    border: 1px solid red;
+}
+    .erfaring-main-content {
+        width: auto;
+        max-width: 1000px;
+        border: 1px solid blue;
+    }
+
+    .periode {
+        border: 1px solid blue;
+    }
