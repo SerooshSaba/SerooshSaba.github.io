@@ -1,0 +1,120 @@
+
+/* Generell struktur av websiden */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+}
+    aside {
+        display: flex;
+        flex-direction: column;
+
+        height: auto;
+        width: 300px;
+        min-width: 250px;
+
+        background-color: rgb(245,245,245);
+    }
+        .meny {
+            display: flex;
+            flex-direction: column;
+            font-size: 17.5px;
+            padding-left: 75px;
+        }
+            .meny > p {
+                color: rgba(0,0,0,0.5);
+                margin-top: 12.5px;
+                cursor: pointer;
+                transition: 0.25s;
+            }
+
+            .meny > p:hover {
+                color: rgba(0,0,0,1);
+                transition: 0.25s;
+            }
+
+    body > section {
+        display: flex;
+        flex-direction: column;
+
+        height: auto;
+        max-height: 100vh;
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        width: 100%;
+    }
+
+        main {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+            .content {
+                display: block;
+                height: 1000px;
+            }
+            
+            /*
+            .content > div {
+                border: 1px solid red;
+            }
+            */
+
+                .segment {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    flex-direction: column;
+
+                    height: auto;
+                    min-height: 800px;
+
+                    padding-left: 50px;
+                }
+
+            .links {
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgba(0,0,0,0.03);
+            }
+                .links > img {
+                    height: 50px;
+                    width:  50px;
+                    margin: 5px;
+                    opacity: 0.75;
+                    cursor: pointer;
+                    transition: 0.1s;
+                }
+
+                .links > img:hover {
+                    opacity: 1;
+                    transform: scale(1.05);
+                    transition: 0.1s;
+                }
+
+
+.scroll-icon {
+    bottom: 50px;
+    right: 50px;
+
+    position: fixed;
+    height: 50px;
+    width:  50px;
+
+    background-image: url("scroll.PNG");
+    background-size: 100%;
+
+}
