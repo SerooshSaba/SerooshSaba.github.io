@@ -23,6 +23,7 @@ body {
         min-width: 250px;
 
         background-color: rgb(245,245,245);
+        border-right: 1px solid rgba(0,0,0,0.25);
     }
         .meny {
             display: flex;
@@ -70,7 +71,7 @@ body {
                     flex-direction: column;
 
                     height: auto;
-                    min-height: 85vh;
+                    min-height: 80vh;
                     
                     padding: 100px 0px;
                     padding-left: 100px;

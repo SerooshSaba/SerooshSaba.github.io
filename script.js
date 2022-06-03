@@ -46,3 +46,15 @@ content.addEventListener('scroll', function (event) {
     }
 
 }, false);
+
+om_knapp.onclick = () => {
+    om_seksjon.scrollIntoView();
+}
+
+erfaring_knapp.onclick = () => {
+    erfaring_seksjon.scrollIntoView();
+}
+
+utdanning_knapp.onclick = () => {
+    utdanning_seksjon.scrollIntoView();
+}

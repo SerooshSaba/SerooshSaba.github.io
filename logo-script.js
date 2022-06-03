@@ -81,7 +81,7 @@ class Edge {
         ctx.beginPath();
         ctx.moveTo(this.vec1.x + xoff, this.vec1.y + yoff );
         ctx.lineTo(this.vec2.x + xoff, this.vec2.y + yoff );
-        ctx.lineWidth = 4;
+        ctx.lineWidth = 2;
         ctx.strokeStyle = "black";
         ctx.stroke();
     }
@@ -316,7 +316,7 @@ setInterval(() => {
     ctx.fill();
     
     box1.centerRot( 0, 0.025, 0 );
-    box2.centerRot( 0, -0.025, 0 );
+    box2.centerRot( 0, 0.025, 0 );
     box3.centerRot( 0.2, 0, 0.5 );
 
     project(box1);
