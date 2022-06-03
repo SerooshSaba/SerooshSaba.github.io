@@ -77,11 +77,11 @@ class Edge {
         this.vec1 = vec1;
         this.vec2 = vec2;
     }
-    render( xoff, yoff ) {
+    render( xoff, yoff, line_width ) {
         ctx.beginPath();
         ctx.moveTo(this.vec1.x + xoff, this.vec1.y + yoff );
         ctx.lineTo(this.vec2.x + xoff, this.vec2.y + yoff );
-        ctx.lineWidth = 2;
+        ctx.lineWidth = line_width;
         ctx.strokeStyle = "rgb(0, 41, 255)";
         ctx.stroke();
     }
@@ -171,8 +171,8 @@ class Shape {
         return vectors;
     }
 
-    render( x_offset, y_offset, Z ) {
-        this.edges.map((edge) => edge.render( x_offset, y_offset ) );
+    render( x_offset, y_offset, Z, line_width ) {
+        this.edges.map((edge) => edge.render( x_offset, y_offset, line_width ) );
     }
 }
 
@@ -271,7 +271,7 @@ const xoff = 250;
 const yoff = 250;
 const Z = -200;
 
-function project( shape ) {
+function project( shape, line_width ) {
     const N = shape.vectors.length;
     const copy = shape.copyVectors();
     var k;
@@ -280,7 +280,7 @@ function project( shape ) {
         shape.vectors[i].x = Math.abs(Z)/k * shape.vectors[i].x;
         shape.vectors[i].y = Math.abs(Z)/k * shape.vectors[i].y;
     }
-    shape.render( xoff, yoff, Z );
+    shape.render( xoff, yoff, Z, line_width );
     for ( var i = 0; i < N; i++ ) {
         shape.vectors[i].x = copy[i].x;
         shape.vectors[i].y = copy[i].y;
@@ -319,8 +319,8 @@ setInterval(() => {
     box2.centerRot( 0.01, 0.025, 0 );
     box3.centerRot( 0.2, 0, 0.5 );
 
-    project(box1);
-    project(box2);
-    project(box3);
+    project(box3, 1);
+    project(box2, 2);
+    project(box1, 4);
     
 }, 5 );
