@@ -5,12 +5,17 @@ const om_knapp = document.getElementById("om-knapp");
 const erfaring_knapp = document.getElementById("erfaring-knapp");
 const utdanning_knapp = document.getElementById("utdanning-knapp");
 
-const alle_knapper = [ om_knapp, erfaring_knapp, utdanning_knapp ];
+// Dots
+const om_dot = document.getElementById("om-dot");
+const erfaring_dot = document.getElementById("erfaring-dot");
+const utdanning_dot = document.getElementById("utdanning-dot");
+const alle_dots = [ om_dot, erfaring_dot, utdanning_dot ];
 
 // Seksjoner
 const om_seksjon = document.getElementById("om-seksjon");
 const erfaring_seksjon = document.getElementById("erfaring-seksjon");
 const utdanning_seksjon = document.getElementById("utdanning-seksjon");
+
 
 function isInViewPort(element) {
     var y_position = element.getBoundingClientRect().y;
@@ -25,27 +30,28 @@ function isInViewPort(element) {
 content.addEventListener('scroll', function (event) {
 
     if (isInViewPort(om_seksjon)) {
-        alle_knapper.forEach((knapp)=>{
-            knapp.style.color = "rgb(150,150,150)";
+        alle_dots.forEach((dot)=>{
+            dot.style.opacity = "0";
         });
-        om_knapp.style.color = "rgb(0,0,0)";
+        om_dot.style.opacity = "1";
     }
 
     if (isInViewPort(erfaring_seksjon)) {
-        alle_knapper.forEach((knapp)=>{
-            knapp.style.color = "rgb(150,150,150)";
+        alle_dots.forEach((dot)=>{
+            dot.style.opacity = "0";
         });
-        erfaring_knapp.style.color = "rgb(0,0,0)";
+        erfaring_dot.style.opacity = "1";
     }
 
     if (isInViewPort(utdanning_seksjon)) {
-        alle_knapper.forEach((knapp)=>{
-            knapp.style.color = "rgb(150,150,150)";
+        alle_dots.forEach((dot)=>{
+            dot.style.opacity= "0";
         });
-        utdanning_knapp.style.color = "rgb(0,0,0)";
+        utdanning_dot.style.opacity = "1";
     }
 
 }, false);
+
 
 om_knapp.onclick = () => {
     om_seksjon.scrollIntoView();

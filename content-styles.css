@@ -1,13 +1,10 @@
-h1, p {
-    /* border: 1px solid red; */
-}
-
 h1 {
     font-size: 85px;
 }
 
 h2 {
-    font-size: 55px;
+    font-size: 70px;
+    color: rgba(0, 41, 255);
 }
 
 h3 {
@@ -85,18 +82,26 @@ p {
             width:  auto;
         }
             .python-logo {
-                height: 30px;
-                width: 30px;
+                height: 32px;
+                width: 32px;
+            }
+            .pycharm-logo {
+                height: 40px;
+                width:  40px;
+
+                margin-top: -5px;
+                margin-left: 20px;
             }
             .mysql-logo {
-                height: 40px;
-                width: 70px;
+                height: 25px;
+                width: 80px;
+                margin-top: 3px;
             }
             .workbench-logo {
-                height: 30px;
-                width: 30px;
-
+                height: 27.5px;
+                width:  27.5px;
                 margin-left: 20px;
+                opacity: 0.5;
             }
             .java-logo {
                 height: 35px;

@@ -82,7 +82,7 @@ class Edge {
         ctx.moveTo(this.vec1.x + xoff, this.vec1.y + yoff );
         ctx.lineTo(this.vec2.x + xoff, this.vec2.y + yoff );
         ctx.lineWidth = 2;
-        ctx.strokeStyle = "black";
+        ctx.strokeStyle = "rgb(0, 41, 255)";
         ctx.stroke();
     }
 }
@@ -302,21 +302,21 @@ box2.translateZ(-25 - 50);
 box2.centerRot( 0, 0, 20 );
 
 const box3 = new Box();
-box3.scale(10);
-box3.translateX(-5);
-box3.translateY(-5);
-box3.translateZ(-5 - 50);
+box3.scale(15);
+box3.translateX(-7.5);
+box3.translateY(-7.5);
+box3.translateZ(-7.5 - 50);
 box3.centerRot( 0, 0, 20 );
 
 setInterval(() => {
 
     ctx.beginPath();
-    ctx.fillStyle = "rgb(245,245,245)";
+    ctx.fillStyle = "rgb(248, 197, 19)";
     ctx.rect(0,0,500,500);
     ctx.fill();
     
-    box1.centerRot( 0, 0.025, 0 );
-    box2.centerRot( 0, 0.025, 0 );
+    box1.centerRot( 0.01, 0.025, 0 );
+    box2.centerRot( 0.01, 0.025, 0 );
     box3.centerRot( 0.2, 0, 0.5 );
 
     project(box1);
