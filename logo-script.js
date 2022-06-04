@@ -311,14 +311,11 @@ box3.centerRot( 0, 0, 20 );
 setInterval(() => {
 
     ctx.beginPath();
-    //ctx.fillStyle = "rgb(248, 197, 19)";
-    ctx.fillStyle = "rgb(225,225,225)";
-    ctx.rect(0,0,500,500);
-    ctx.fill();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
     
-    box1.centerRot( 0.04, 0.03, 0 );
-    box2.centerRot( 0.04, 0.03, 0 );
-    box3.centerRot( 0.04, 0.03, 0 );
+    box1.centerRot( 0.05, 0.04, 0 );
+    box2.centerRot( 0.05, 0.04, 0 );
+    box3.centerRot( 0.05, 0.04, 0 );
 
     project(box3, 1);
     project(box2, 2);

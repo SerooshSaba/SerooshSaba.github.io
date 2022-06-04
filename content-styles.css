@@ -91,15 +91,62 @@ p {
                 height: 25px;
                 width:  25px;
 
-                margin-left: 10px;
+                margin-left: 5px;
             }
 
             .skill-text-container {
                 margin: 0px 0px 0px 25px;
             }
+    
+.skills-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
 
+    height: auto;
+    width: auto;
 
+    margin:  0px;
+    padding: 0px;
+    margin-top: 40px;
+}
+    .skills-row > img {
+        margin-right: 10px;
+    }
 
+    .skill-java {
+        height: 65px;
+        width:  65px;
+    }
+
+    .skill-python {
+        height: 55px;
+        width:  55px;
+    }
+
+    .skill-mysql {
+        height: 80px;
+        width:  100px;
+        margin: 0px;
+    }
+
+    .skill-javascript {
+        height: 40px;
+        width:  40px;
+    }
+
+    .skill-react {
+        height: 50px;
+        width:  50px;
+        margin-left: 15px;
+    }
+
+    .skill-php {
+        height: 60px;
+        width:  65px;
+        margin-left: 10px;
+    }
 
 /* Experience */
 .erfaring-modul-container {
@@ -194,6 +241,19 @@ p {
                 height: 30px;
                 width: 80px;
                 filter: contrast(150%);
+            }
+            .js-logo {
+                height: 35px;
+                width:  35px;
+            }
+            .react-logo {
+                height: 35px;
+                width:  35px;
+                filter: contrast(150%);
+            }
+            .php-logo {
+                height: 40px;
+                width:  50px;
             }
 
     .experience-location {

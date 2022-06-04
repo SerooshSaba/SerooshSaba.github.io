@@ -21,6 +21,7 @@ body {
 
         /*background-image: linear-gradient( 180deg, rgb(248, 197, 19), rgb(248, 197, 19), white, white);*/
         background-color: rgb(225,225,225);
+        transition: 1.5s;
     }
         .menu {
             display: flex;
