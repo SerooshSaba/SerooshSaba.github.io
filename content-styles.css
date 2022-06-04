@@ -132,8 +132,8 @@ p {
     }
 
     .skill-javascript {
-        height: 40px;
-        width:  40px;
+        height: 45px;
+        width:  45px;
     }
 
     .skill-react {
@@ -196,15 +196,15 @@ p {
         .tech-row {
             display: flex;
             justify-content: flex-start;
-            align-items: flex-start;
+            align-items: center;
             flex-direction: row;
 
             height: auto;
             width:  auto;
         }
             .python-logo {
-                height: 32px;
-                width: 32px;
+                height: 45px;
+                width:  45px;
                 filter: contrast(150%);
             }
             .pycharm-logo {
@@ -215,7 +215,7 @@ p {
                 margin-left: 20px;
             }
             .mysql-logo {
-                height: 25px;
+                height: 65px;
                 width: 80px;
                 margin-top: 3px;
                 filter: contrast(200%);
@@ -226,8 +226,8 @@ p {
                 margin-left: 20px;
             }
             .java-logo {
-                height: 35px;
-                width: 70px;
+                height: 50px;
+                width:  50px;
                 filter: contrast(150%);
             }
             .processing-logo {
