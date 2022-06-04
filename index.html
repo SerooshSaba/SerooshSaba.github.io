@@ -10,20 +10,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap" rel="stylesheet">
         <script src="script.js" defer></script>
         <script src="logo-script.js" defer></script>
-
+        <script src="start.js" defer></script>
     </head>
 
     <body>
 
         <aside>
             <canvas id="canvas" height="500" width="500" ></canvas>
-            <div class="meny" >
-                <div><p id="om-knapp"           class="meny-item" > Om          </p> <span id="om-dot" style="opacity: 0;" >        ●</span> </div>
-                <div><p id="erfaring-knapp"     class="meny-item" > Erfaring    </p> <span id="erfaring-dot" style="opacity: 0;" >  ●</span> </div>
-                <div><p id="utdanning-knapp"    class="meny-item" > Utdanning   </p> <span id="utdanning-dot" style="opacity: 0;" > ●</span> </div>
-                <div><p                         class="meny-item" > Skills      </p> </div>
-                <div><p                         class="meny-item" > Interesser  </p> </div>
-                <div><p                         class="meny-item" > Kontakt  </p> </div>
+            <div class="menu" >
+
+                <div><p id="about-button"       class="menu-item" > About               </p> <span id="about-dot"       style="opacity: 1" > ● </span> </div>
+                <div><p id="skills-button"      class="menu-item" > Skills              </p> <span id="skills-dot"      style="opacity: 0" > ● </span> </div>
+                <div><p id="projects-button"    class="menu-item" > Projects            </p> <span id="projects-dot"    style="opacity: 0" > ● </span> </div>
+                <div><p id="experience-button"  class="menu-item" > Work experience     </p> <span id="experience-dot"  style="opacity: 0" > ● </span> </div>
+                <div><p                         class="menu-item" > Background          </p> </div>
+                <div><p                         class="menu-item" > Contact             </p> </div>
+ 
             </div>
         </aside>
 
@@ -31,34 +33,171 @@
             <main>
                 <div class="content" >
                     
-                    <div id="om-seksjon" class="segment" >
-                        <h1>Seroosh <span style="color:rgb(0, 41, 255)" >Saba</span></h1>
-                        <p class="informasjon" >OSLO - BERGEN - HALDEN - 911 23 725 - SEROOSHSABA@GMAIL.COM</p>
-                        
-                        <p>
-                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-                        dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                        </p>
-                        
-                        <p>
-                        Neque porro quisquam 
-                        est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius 
-                        modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, 
-                        quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-                        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
-                        vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-                        </p>
+
+
+
+                    <div id="about-section" class="segment about-section" style="flex-direction: row; align-items: center" >
+                        <!-- Left side -->
+                        <img class="profile-picture" src="profile.PNG" />
+                        <!-- Right side -->
+                        <div>
+                            <h1><span style="color:rgb(10, 102, 194)" >Seroosh Saba</span></h1>
+                            <p class="information" >OSLO - BERGEN - HALDEN - +47 911 23 725 - SEROOSHSABA@GMAIL.COM</p>
+                            <p>
+                                Tech enthusiast freshly out of college, with a degree in Informatics and a specialization in Machine Learning.
+                         
+                                Experienced in many technologies, but currently focusing on fullstack technologies like ReactJs, JavaScript, 
+                                Java, MySql, html5 and css.
+                            </p>
+                        </div>
                     </div>
 
-                    <div id="erfaring-seksjon" class="segment" >
-                        <h2>Arbeidserfaring</h2>
-                        
+
+
+
+                    <div id="skills-section" class="segment" >
+                        <h2>Skills</h2>
+
+                        <div class="skills-row-container" style="margin-top: 75px" >
+                            <div class="skills-column-container" >
+                                
+                                <div class="skill-container" >
+                                    <div class="skills-row-container" style="align-items: center" >
+                                        <img class="skill-icon" src="monitor.png" />
+                                        <div class="skills-column-container skill-text-container" >
+                                            <h4>Frontend development</h4>
+                                            <p>
+                                                Develop frontend applications with <b>ReactJs</b>, <b>html5</b> and <b>css</b>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-container" >
+                                    <div class="skills-row-container" style="align-items: center" >
+                                        <img class="skill-icon" src="engineering.png" />
+                                        <div class="skills-column-container skill-text-container" >
+                                            <h4>Software Engineering</h4>
+                                            <p>
+                                                Create and plan software with <b>design patterns</b>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-container" >
+                                    <div class="skills-row-container" style="align-items: center" >
+                                        <img class="skill-icon" src="testing.png" />
+                                        <div class="skills-column-container skill-text-container" >
+                                            <h4>Testing</h4>
+                                            <p>
+                                                Write software tests for frontend components, backend functions and APIs.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="skills-column-container" >
+                                
+                                <div class="skill-container" >
+                                    <div class="skills-row-container" style="align-items: center" >
+                                        <img class="skill-icon" src="database.png" />
+                                        <div class="skills-column-container skill-text-container" >
+                                            <h4>Backend development</h4>
+                                            <p>
+                                                Make backend solutions with <b>Java</b>, <b>NodeJs</b>, <b>PHP</b> and <b>MySql</b>.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-container" >
+                                    <div class="skills-row-container" style="align-items: center" >
+                                        <img class="skill-icon" src="ai.png" />
+                                        <div class="skills-column-container skill-text-container" >
+                                            <h4>Machine learning</h4>
+                                            <p>
+                                                Preparing data for training of supervised <b>classification</b> and <b>regression</b> models.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="" >
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div id="projects-section" class="segment" >
+                        <h2>Projects</h2>
+
+                        <div class="erfaring-modul-container" > <!-- 3D Engine -->
+                            <div class="erfaring-main-content">
+                                <h3>3D graphics engine i Java</h3>
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+                                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                                </p>
+
+                                <div class="tech-row" >
+                                    <img src="tech-images/java.PNG" class="java-logo" title="Java" />
+                                    <img src="tech-images/processing.PNG" class="processing-logo" title="Processing" />
+                                </div>
+
+                                <div class="github-link" >
+                                    Check on Github
+                                </div>
+
+                            </div>
+                            <img src="engine.gif"/>
+                        </div>
+
+
+                        <div class="erfaring-modul-container" > <!-- System for traffikkovervåkning -->
+                            <div class="erfaring-main-content">
+                                <h3>Traffic monitoring system for low end devices</h3>
+                                <p>
+                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+                                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+                                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+                                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                                </p>
+
+                                <div class="tech-row" >
+                                    <img src="tech-images/python.jpg" class="python-logo" title="Python" />
+                                    <img src="tech-images/opencv.PNG" class="opencv-logo" title="OpenCV2" style="margin-left: 25px" />
+                                </div>
+
+                                <div class="github-link" >
+                                    Check on Github
+                                </div>
+
+                            </div>                                
+                            <img src="monitor.gif"/>
+                        </div>
+
+                    </div>
+
+
+
+
+                    <div id="experience-section" class="segment" >
+                        <h2>Work experience</h2>
+
                         <div class="erfaring-modul-container" > <!-- PROGRAMMERING 1 -->
                             <div class="erfaring-main-content">
-                                <h3>Lærerassistent i Programmering 1</h3>
-                                <div class="erfaring-sted" >Høgskolen I Østfold - Halden</div>
+                                <h3>Teacher's assistant in Programming 1</h3>
+                                <div class="experience-location" >Østfold University College - Halden</div>
                                 <p>
                                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
                                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
@@ -66,19 +205,19 @@
                                     sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
                                 </p>
                                 <div class="tech-row" >
-                                    <img src="tech-logoer/python.jpg" class="python-logo" title="Python" />
-                                    <img src="tech-logoer/pycharm.PNG" class="pycharm-logo" title="Pycharm" />
+                                    <img src="tech-images/python.jpg" class="python-logo" title="Python" />
+                                    <img src="tech-images/pycharm.PNG" class="pycharm-logo" title="Pycharm" />
                                 </div>
                             </div>
-                            <div class="periode" >
+                            <div class="period" >
                                 august 2021 - november 2021
                             </div>
                         </div>
                     
                         <div class="erfaring-modul-container" > <!-- DATABASESYSTEMER -->
                             <div class="erfaring-main-content">
-                                <h3>Lærerassistent i Databasesystemer</h3>
-                                <div class="erfaring-sted" >Høgskolen I Østfold - Halden</div>
+                                <h3>Teacher's assistant in Database systems</h3>
+                                <div class="experience-location" >Østfold University College - Halden</div>
                                 <p>
                                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
                                     totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
@@ -86,97 +225,35 @@
                                     sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
                                 </p>
                                 <div class="tech-row" >
-                                    <img src="tech-logoer/mysql.png" class="mysql-logo" title="MySql" />
-                                    <img src="tech-logoer/workbench.jpg" class="workbench-logo" title="MySql workbench" />
+                                    <img src="tech-images/mysql.png" class="mysql-logo" title="MySql" />
+                                    <img src="tech-images/workbench.jpg" class="workbench-logo" title="MySql workbench" />
                                 </div>
                             </div>
-                            <div class="periode" >
-                                januar 2021 - mai 2021
+                            <div class="period" >
+                                january 2021 - mai 2021
                             </div>
                         </div>
 
                         <div class="erfaring-modul-container" > <!-- Narvesen -->
                             <div class="erfaring-main-content">
-                                <h3>Butikkmedarbeider</h3>
-                                <div class="erfaring-sted" >Narvesen - Bergen</div>
+                                <h3>Store employee</h3>
+                                <div class="experience-location" >Narvesen - Bergen</div>
                                 <p>
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-                                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-                                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
+                                    Before i choose pursue a degree in college, i wanted to take a break from school to muture for a bit.
+                                    Therefore i started working as a store employee for a year.
                                 </p>
                             </div>
-                            <div class="periode" >
-                                august 2017 - juli 2018
+                            <div class="period" >
+                                august 2017 - july 2018
                             </div>
                         </div>
-
-                        <h2 style="margin-top: 250px" >Annen erfaring</h2>
-
-                        <div class="erfaring-modul-container" > <!-- 3D Engine -->
-                            <div class="erfaring-main-content">
-                                <h3>3D motor i Java</h3>
-                                <p>
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-                                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-                                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                                </p>
-
-                                <div class="tech-row" >
-                                    <img src="tech-logoer/java.PNG" class="java-logo" title="Java" />
-                                    <img src="tech-logoer/processing.PNG" class="processing-logo" title="Processing" />
-                                </div>
-
-                                <div class="github-link" >
-                                    Sjekk prosjekt
-                                </div>
-
-                            </div>
-                            <div class="periode" >
-                                januar 2021 - mai 2021
-                            </div>
-                        </div>
-
-
-                        <div class="erfaring-modul-container" > <!-- System for traffikkovervåkning -->
-                            <div class="erfaring-main-content">
-                                <h3>System for trafikkovervåkning</h3>
-                                <p>
-                                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
-                                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
-                                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
-                                </p>
-
-                                <div class="tech-row" >
-                                    <img src="tech-logoer/python.jpg" class="python-logo" title="Python" />
-                                    <img src="tech-logoer/opencv.PNG" class="opencv-logo" title="OpenCV2" style="margin-left: 25px" />
-
-                                </div>
-
-                                <div class="github-link" >
-                                    Sjekk prosjekt
-                                </div>
-
-                            </div>
-                            <div class="periode" >
-                                januar 2022 - mars 2022
-                            </div>
-                        </div>
-
 
                     </div>
 
 
-                    <div id="utdanning-seksjon" class="segment" >
-                        <h2>Utdanning</h2>
-
-                    </div>
 
 
                     <div class="links" >
-                        
                         <a href="https://www.linkedin.com/in/seroosh-saba-449949158/" target="_blank" >
                             <img src="https://cdn1.iconfinder.com/data/icons/social-media-circle-7/512/Circled_Linkedin_svg-512.png">
                         </a>
@@ -186,7 +263,6 @@
                         <a href="https://github.com/SerooshSaba" target="_blank" >
                             <img src="https://cdn-icons-png.flaticon.com/512/1051/1051326.png?w=826">
                         </a>
-
                     </div>
 
                 </div>

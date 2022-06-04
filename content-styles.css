@@ -4,15 +4,16 @@ h1 {
 
 h2 {
     font-size: 70px;
-    color: rgba(0, 41, 255);
+    color: rgb(10, 102, 194);
 }
 
 h3 {
     font-size: 30px;
     margin-bottom: 20px;
+    color: black;
 }
 
-.informasjon {
+.information {
     margin-bottom: 30px;
 
     color: rgba(0,0,0,0.5);
@@ -24,10 +25,83 @@ p {
     margin-bottom: 17.5px;
 }
 
+/* About */
+
+.about-section {
+    opacity: 0.5;
+    transition: 1.5s;
+    transform: translateY(-10px);
+}
+
+.profile-picture {
+    height: 200px;
+    width:  200px;
+    margin-right: 100px;
+    margin-left: 125px;
+}
+
+/* Skills */
+
+.skills-row-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+
+    height: auto;
+    width:  auto;
+}
+    .skills-column-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+
+        height: auto;
+        width:  auto;
+    }
+        .skill-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: row;
+            
+            height: auto;
+            width: 450px;
+
+            margin: 0px 30px 30px 0px;
+            padding: 15px 20px 15px 27.5px;
+
+            background-color: rgb(246,246,246);
+            border-radius: 5px;
+
+            transition: 0.05s;
+        }
+
+        .skill-text-container > h4 {
+            font-size: 17px;
+        }
+
+        .skill-text-container > p {
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+            .skill-icon {
+                height: 25px;
+                width:  25px;
+
+                margin-left: 10px;
+            }
+
+            .skill-text-container {
+                margin: 0px 0px 0px 25px;
+            }
 
 
-/* Erfaring */
 
+
+/* Experience */
 .erfaring-modul-container {
     display: flex;
     justify-content: flex-start;
@@ -84,6 +158,7 @@ p {
             .python-logo {
                 height: 32px;
                 width: 32px;
+                filter: contrast(150%);
             }
             .pycharm-logo {
                 height: 40px;
@@ -96,32 +171,36 @@ p {
                 height: 25px;
                 width: 80px;
                 margin-top: 3px;
+                filter: contrast(200%);
             }
             .workbench-logo {
                 height: 27.5px;
                 width:  27.5px;
                 margin-left: 20px;
-                opacity: 0.5;
             }
             .java-logo {
                 height: 35px;
                 width: 70px;
+                filter: contrast(150%);
             }
             .processing-logo {
                 height: 35px;
                 width: 40px;
                 margin-left: 25px;
+
+                filter: contrast(150%);
             }
             .opencv-logo {
                 height: 30px;
                 width: 80px;
+                filter: contrast(150%);
             }
 
-    .erfaring-sted {
+    .experience-location {
         margin: -12.5px 0px 11px 0px;
         color: rgba(0,0,0,0.5)
     }
 
-    .periode {
+    .period {
         color: rgba(0,0,0,0.5)
     }
