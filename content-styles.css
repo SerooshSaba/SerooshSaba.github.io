@@ -300,3 +300,11 @@ p {
             transform: scale(1.05);
             transition: 0.1s;
         }
+
+        #email-phone-section {
+            height: 100px;
+            width:  400px;
+
+            margin-left: 10px;
+            opacity: 1;
+        }

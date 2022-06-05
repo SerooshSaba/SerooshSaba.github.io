@@ -106,3 +106,19 @@ experience_button.onclick = () => {
 contact_button.onclick = () => {
     contact_section.scrollIntoView();
 }
+
+
+// Email and phone button click
+
+const email_button = document.getElementById("email-button");
+const phone_button = document.getElementById("phone-button");
+
+const email_phone_section = document.getElementById("email-phone-section");
+
+email_button.onclick = () => {
+    email_phone_section.innerText = "Email: serooshsaba@gmail.com";
+};
+
+phone_button.onclick = () => {
+    email_phone_section.innerText = "Phone: +47 911 23 725";
+};
