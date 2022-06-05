@@ -19,7 +19,7 @@ body {
         width: 300px;
         min-width: 250px;
 
-        background-color: rgb(225,225,225);
+        background-color: rgb(255,255,255);
         transition: 1.5s;
     }
         .menu {
@@ -45,7 +45,7 @@ body {
                     margin-left: 15px;
                     font-size: 14px;
                     color: rgb(10, 102, 194);
-                    transition: 0.5s;
+                    transition: 0.25s;
 
                     user-select: none;
                 }
@@ -107,6 +107,8 @@ body {
                     
                     padding: 100px 0px;
                     padding-left: 100px;
+
+                    transition: 0.75s;
                 }
 
 

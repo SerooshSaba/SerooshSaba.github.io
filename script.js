@@ -44,6 +44,9 @@ content.addEventListener('scroll', function (event) {
     }
 
     if (isInViewPort(skills_section)) {
+
+        skills_section.style.opacity = 1;
+
         alle_dots.forEach((dot)=>{
             dot.style.opacity = "0";
         });
@@ -51,6 +54,9 @@ content.addEventListener('scroll', function (event) {
     }
 
     if (isInViewPort(projects_section)) {
+
+        projects_section.style.opacity = 1;
+
         alle_dots.forEach((dot)=>{
             dot.style.opacity = "0";
         });
@@ -58,6 +64,9 @@ content.addEventListener('scroll', function (event) {
     }
 
     if (isInViewPort(experience_section)) {
+
+        experience_section.style.opacity = 1;
+
         alle_dots.forEach((dot)=>{
             dot.style.opacity = "0";
         });

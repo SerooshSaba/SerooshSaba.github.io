@@ -27,12 +27,6 @@ p {
 
 /* About */
 
-.about-section {
-    opacity: 0.5;
-    transition: 1.5s;
-    transform: translateY(-10px);
-}
-
 .profile-picture {
     height: 200px;
     width:  200px;
@@ -70,7 +64,7 @@ p {
             width: 450px;
 
             margin: 0px 30px 30px 0px;
-            padding: 15px 20px 15px 27.5px;
+            padding: 15px 20px 5px 27.5px;
 
             background-color: rgb(246,246,246);
             border-radius: 5px;
@@ -78,8 +72,14 @@ p {
             transition: 0.05s;
         }
 
+        .skill-text-container {
+            padding-left: 5px;
+        }
+
         .skill-text-container > h4 {
             font-size: 17px;
+            margin-top: 5px;
+            margin-bottom: 5px;
         }
 
         .skill-text-container > p {
@@ -88,16 +88,17 @@ p {
         }
 
             .skill-icon {
-                height: 25px;
-                width:  25px;
+                height: 30px;
+                width:  30px;
 
-                margin-left: 5px;
+                margin-left:   5px;
+                margin-bottom: 10px;
             }
 
             .skill-text-container {
                 margin: 0px 0px 0px 25px;
             }
-    
+
 .skills-row {
     display: flex;
     justify-content: flex-start;
@@ -111,8 +112,12 @@ p {
     padding: 0px;
     margin-top: 40px;
 }
+
     .skills-row > img {
         margin-right: 10px;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        user-select: none;
     }
 
     .skill-java {
@@ -186,11 +191,19 @@ p {
 
             transition: 0.1s;
             cursor: pointer;
+
+            user-select: none;
+
+            text-decoration: none;
         }
 
         .github-link:hover {
             transform: scale(1.05);
             transition: 0.1s;
+        }
+
+        .gif {
+            border-radius: 7.5px;
         }
 
         .tech-row {
@@ -205,57 +218,46 @@ p {
             .python-logo {
                 height: 45px;
                 width:  45px;
-                filter: contrast(150%);
+                filter: contrast(100%) grayscale(1);
             }
             .pycharm-logo {
                 height: 40px;
                 width:  40px;
-
                 margin-top: -5px;
                 margin-left: 20px;
+                filter: grayscale(1);
             }
             .mysql-logo {
                 height: 65px;
                 width: 80px;
                 margin-top: 3px;
-                filter: contrast(200%);
+                filter: grayscale(1);
             }
             .workbench-logo {
                 height: 27.5px;
                 width:  27.5px;
                 margin-left: 20px;
+                filter: grayscale(1);
             }
             .java-logo {
                 height: 50px;
                 width:  50px;
-                filter: contrast(150%);
+                filter: grayscale(1);
             }
             .processing-logo {
                 height: 35px;
                 width: 40px;
                 margin-left: 25px;
 
-                filter: contrast(150%);
+                filter: grayscale(1);
             }
             .opencv-logo {
                 height: 30px;
                 width: 80px;
-                filter: contrast(150%);
-            }
-            .js-logo {
-                height: 35px;
-                width:  35px;
-            }
-            .react-logo {
-                height: 35px;
-                width:  35px;
-                filter: contrast(150%);
-            }
-            .php-logo {
-                height: 40px;
-                width:  50px;
+                filter: grayscale(1);
             }
 
+            
     .experience-location {
         margin: -12.5px 0px 11px 0px;
         color: rgba(0,0,0,0.5)

@@ -301,12 +301,14 @@ box2.translateY(-25);
 box2.translateZ(-25 - 50);
 box2.centerRot( 0, 0, 20 );
 
+/*
 const box3 = new Box();
 box3.scale(15);
 box3.translateX(-7.5);
 box3.translateY(-7.5);
 box3.translateZ(-7.5 - 50);
 box3.centerRot( 0, 0, 20 );
+*/
 
 setInterval(() => {
 
@@ -315,9 +317,9 @@ setInterval(() => {
     
     box1.centerRot( 0.05, 0.04, 0 );
     box2.centerRot( 0.05, 0.04, 0 );
-    box3.centerRot( 0.05, 0.04, 0 );
+    //box3.centerRot( 0.05, 0.04, 0 );
 
-    project(box3, 1);
+    //project(box3, 1);
     project(box2, 2);
     project(box1, 6);
     
