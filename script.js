@@ -5,20 +5,24 @@ const about_button = document.getElementById("about-button");
 const skills_button = document.getElementById("skills-button");
 const projects_button = document.getElementById("projects-button");
 const experience_button = document.getElementById("experience-button");
+const contact_button = document.getElementById("contact-button");
 
 // Dots
 const about_dot = document.getElementById("about-dot");
 const skills_dot = document.getElementById("skills-dot");
 const projects_dot = document.getElementById("projects-dot");
 const experience_dot = document.getElementById("experience-dot");
+const contact_dot = document.getElementById("contact-dot");
 
-const alle_dots = [ about_dot, skills_dot, experience_dot, projects_dot ];
+
+const alle_dots = [ about_dot, skills_dot, experience_dot, projects_dot, contact_dot ];
 
 // Sections
 const about_section = document.getElementById("about-section");
 const skills_section = document.getElementById("skills-section");
 const projects_section = document.getElementById("projects-section");
 const experience_section = document.getElementById("experience-section");
+const contact_section = document.getElementById("contact-section");
 
 
 
@@ -38,9 +42,9 @@ content.addEventListener('scroll', function (event) {
 
     if (isInViewPort(about_section)) {
         alle_dots.forEach((dot)=>{
-            dot.style.opacity = "0";
+            dot.style.opacity = 0;
         });
-        about_dot.style.opacity = "1";
+        about_dot.style.opacity = 1;
     }
 
     if (isInViewPort(skills_section)) {
@@ -48,9 +52,9 @@ content.addEventListener('scroll', function (event) {
         skills_section.style.opacity = 1;
 
         alle_dots.forEach((dot)=>{
-            dot.style.opacity = "0";
+            dot.style.opacity = 0;
         });
-        skills_dot.style.opacity = "1";
+        skills_dot.style.opacity = 1;
     }
 
     if (isInViewPort(projects_section)) {
@@ -58,9 +62,9 @@ content.addEventListener('scroll', function (event) {
         projects_section.style.opacity = 1;
 
         alle_dots.forEach((dot)=>{
-            dot.style.opacity = "0";
+            dot.style.opacity = 0;
         });
-        projects_dot.style.opacity = "1";
+        projects_dot.style.opacity = 1;
     }
 
     if (isInViewPort(experience_section)) {
@@ -68,9 +72,19 @@ content.addEventListener('scroll', function (event) {
         experience_section.style.opacity = 1;
 
         alle_dots.forEach((dot)=>{
-            dot.style.opacity = "0";
+            dot.style.opacity = 0;
         });
-        experience_dot.style.opacity = "1";
+        experience_dot.style.opacity = 1;
+    }
+
+    if (isInViewPort(contact_section)) {
+
+        contact_section.style.opacity = 1;
+
+        alle_dots.forEach((dot)=>{
+            dot.style.opacity = 0;
+        });
+        contact_dot.style.opacity = 1;
     }
 
 }, false);
@@ -88,4 +102,7 @@ projects_button.onclick = () => {
 }
 experience_button.onclick = () => {
     experience_section.scrollIntoView();
+}
+contact_button.onclick = () => {
+    contact_section.scrollIntoView();
 }

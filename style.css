@@ -7,6 +7,23 @@
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 13.5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.25); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.35); 
+}
+
+
 body {
     display: flex;
     flex-direction: row;
@@ -112,21 +129,3 @@ body {
                 }
 
 
-            .links {
-                height: 250px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-                .links > a > img {
-                    height: 50px;
-                    width:  50px;
-                    margin: 0px 10px;
-                    cursor: pointer;
-                    transition: 0.1s;
-                }
-
-                .links > a > img:hover {
-                    transform: scale(1.05);
-                    transition: 0.1s;
-                }
