@@ -14,10 +14,12 @@ h3 {
 }
 
 .information {
-    margin-bottom: 30px;
+    width: 100%;
+    margin-bottom: 15px;
 
     color: rgba(0,0,0,0.5);
     font-weight: 500;
+    font-size: 16.5px;
 }
 
 p {
