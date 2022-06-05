@@ -1,9 +1,9 @@
 h1 {
-    font-size: 85px;
+    font-size: 90px;
 }
 
 h2 {
-    font-size: 70px;
+    font-size: 80px;
     color: rgb(10, 102, 194);
 }
 
@@ -21,6 +21,7 @@ h3 {
 }
 
 p {
+    line-height: 25px;
     width: 75%;
     margin-bottom: 17.5px;
 }
@@ -155,7 +156,7 @@ p {
 /* Experience */
 .erfaring-modul-container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     flex-direction: row;
 
@@ -227,8 +228,8 @@ p {
                 filter: grayscale(1);
             }
             .mysql-logo {
-                height: 65px;
-                width: 80px;
+                height: 40px;
+                width:  50px;
                 margin-top: 3px;
                 filter: grayscale(1);
             }
@@ -276,8 +277,8 @@ p {
         align-items: center;
     }
         .links > a > img {
-            height: 50px;
-            width:  50px;
+            height: 60px;
+            width:  60px;
             margin: 0px 10px;
             cursor: pointer;
             transition: 0.1s;
@@ -289,8 +290,8 @@ p {
         }
 
         .links > img {
-            height: 55px;
-            width:  55px;
+            height: 66px;
+            width:  66px;
             margin: 0px 10px;
             cursor: pointer;
             transition: 0.1s;
@@ -304,7 +305,5 @@ p {
         #email-phone-section {
             height: 100px;
             width:  400px;
-
-            margin-left: 10px;
-            opacity: 1;
+            margin-left: 12.5px;
         }
