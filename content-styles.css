@@ -236,16 +236,24 @@ p {
                 filter: grayscale(1);
             }
             .mysql-logo {
-                height: 40px;
-                width:  50px;
-                margin-top: 3px;
+                height: 30px;
+                width:  55px;
+                margin-right: 3px;
+                
+                transform: scale(2) translateX(2px);
                 filter: grayscale(1);
             }
             .workbench-logo {
-                height: 27.5px;
-                width:  27.5px;
+                height: 30px;
+                width:  30px;
                 margin-left: 20px;
                 filter: grayscale(1);
+            }
+            .sqlite-logo {
+                height: 35px;
+                width:  70px;
+                margin-left: 20px;
+                filter: contrast(150%) grayscale(1);
             }
             .java-logo {
                 height: 50px;
