@@ -126,6 +126,7 @@ p {
     .skill-java {
         height: 65px;
         width:  65px;
+        margin-left: -10px;
     }
 
     .skill-python {
@@ -222,9 +223,13 @@ p {
             height: auto;
             width:  auto;
         }
+
+        .tech-row > img {
+            opacity: 0.4;
+        }
             .python-logo {
-                height: 45px;
-                width:  45px;
+                height: 40px;
+                width:  40px;
                 filter: contrast(100%) grayscale(1);
             }
             .pycharm-logo {
@@ -235,8 +240,8 @@ p {
                 filter: grayscale(1);
             }
             .junit-logo {
-                height: 30px;
-                width:  55px;
+                height: 25px;
+                width:  50px;
                 margin-left: 20px;
                 filter: contrast(150%) grayscale(1);
             }
@@ -251,29 +256,30 @@ p {
             .workbench-logo {
                 height: 30px;
                 width:  30px;
-                margin-left: 20px;
+                margin-left: 30px;
                 filter: grayscale(1);
             }
             .sqlite-logo {
-                height: 35px;
-                width:  75px;
+                height: 27.5px;
+                width:  60px;
                 margin-left: 20px;
                 filter: contrast(150%) grayscale(1);
             }
             .java-logo {
-                height: 55px;
-                width:  55px;
+                height: 45px;
+                width:  45px;
+                margin-left: -10px;
                 filter: grayscale(1);
             }
             .processing-logo {
-                height: 35px;
-                width: 40px;
+                height: 30px;
+                width:  30px;
                 margin-left: 15px;
                 filter: grayscale(1);
             }
             .opencv-logo {
-                height: 30px;
-                width: 80px;
+                height: 27.5px;
+                width: 70px;
                 filter: grayscale(1);
             }
 
@@ -284,11 +290,8 @@ p {
     }
 
     .period {
-        color: rgba(0,0,0,0.5)
+        color: rgba(0,0,0,0.5);
     }
-
-
-
 
     .links {
         height: 150px;
