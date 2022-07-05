@@ -377,7 +377,7 @@ box3.translateZ(-7.5 - 50);
 box3.centerRot( 0, 0, 20 );
 
 // Spheres
-const sphere1 = new Sphere( 50,  15, 0.1 );
+const sphere1 = new Sphere( 75,  15, 0.1 );
 sphere1.scale(90);
 
 const sphere2 = new Sphere( 6,  25, 0.15 );
@@ -410,4 +410,4 @@ setInterval(() => {
     sphere2.centerRot( 0.5, -0.4, 0 );
     sphere3.centerRot( 0.5, -0.4, 0 );
 
-}, 25 );
+}, 30 );
