@@ -1,8 +1,12 @@
 
 // Setter opp canvas
-var canvas, ctx;
-canvas = document.getElementById("canvas");
-ctx = canvas.getContext("2d");
+var cubeCanvas, sphereCanvas, ctx1, ctx2;
+
+cubeCanvas = document.getElementById("canvas");
+sphereCanvas = document.getElementById("sphereCanvas");
+
+ctx1 = cubeCanvas.getContext("2d");
+ctx2 = sphereCanvas.getContext("2d");
 
 class Vec3 {
 
@@ -77,13 +81,13 @@ class Edge {
         this.vec1 = vec1;
         this.vec2 = vec2;
     }
-    render( xoff, yoff, line_width ) {
-        ctx.beginPath();
-        ctx.moveTo(this.vec1.x + xoff, this.vec1.y + yoff );
-        ctx.lineTo(this.vec2.x + xoff, this.vec2.y + yoff );
-        ctx.lineWidth = line_width;
-        ctx.strokeStyle = "rgb(10, 102, 194)";
-        ctx.stroke();
+    render( xoff, yoff, line_width, context ) {
+        context.beginPath();
+        context.moveTo(this.vec1.x + xoff, this.vec1.y + yoff );
+        context.lineTo(this.vec2.x + xoff, this.vec2.y + yoff );
+        context.lineWidth = line_width;
+        context.strokeStyle = "rgb(10, 102, 194)";
+        context.stroke();
     }
 }
 
@@ -164,6 +168,24 @@ class Shape {
 
     }
 
+    centerSelf() {
+        var x = 0;
+        var y = 0;
+        var z = 0;
+        const N = this.vectors.length;
+        for ( var i = 0; i < N; i++ ) {
+            x += this.vectors[i].x;
+            y += this.vectors[i].y;
+            z += this.vectors[i].z;
+        }
+        x /= N;
+        y /= N;
+        z /= N;
+        this.translateX( - x );
+        this.translateY( - y );
+        this.translateZ( - z );
+    }
+
     copyVectors() {
         const vectors = [];
         for ( var i = 0; i < this.vectors.length; i++ ) 
@@ -171,8 +193,8 @@ class Shape {
         return vectors;
     }
 
-    render( x_offset, y_offset, Z, line_width ) {
-        this.edges.map((edge) => edge.render( x_offset, y_offset, line_width ) );
+    render( x_offset, y_offset, Z, line_width, context ) {
+        this.edges.map((edge) => edge.render( x_offset, y_offset, line_width, context ) );
     }
 }
 
@@ -206,6 +228,51 @@ class Box extends Shape {
         ];
         super( vectors, edges );
     }
+}
+
+class Sphere extends Shape {
+
+    constructor( resolution, LVLS, step_size ) {
+        
+
+        var edges   = [];
+        var vectors = [];
+        var x, y, z;
+
+        const stepSize = 2 * Math.PI / resolution;
+
+        // Generate vectors
+        for ( var levels = 0; levels < LVLS; levels++ ) {
+            for ( var loop = 0; loop < resolution; loop++ ) {
+                x = Math.sin( stepSize * loop );
+                y = levels * step_size;
+                z = Math.cos( stepSize * loop );
+                vectors.push( new Vec3(x,y,z) );
+            }
+        }
+
+        // Create loop edges
+        for ( var levels = 0; levels < LVLS; levels++ ) {
+            const start_index = resolution * levels;
+            const end_index   = resolution * ( 1 + levels );
+            for ( var i = start_index + 1; i < end_index; i++ ) {
+                edges.push( new Edge( vectors[i-1], vectors[i] ) );
+            }
+            edges.push( new Edge( vectors[start_index], vectors[end_index-1] ) );
+        }
+    
+        // Create transfer edges
+        for ( var levels = 0; levels < LVLS - 1; levels++ ) {
+            const start_index = resolution * levels;
+            const end_index   = resolution * ( 1 + levels );
+            for ( var i = start_index; i < end_index; i++ ) {
+                edges.push( new Edge( vectors[i], vectors[i+resolution] ) );
+            }
+        }
+        
+        super( vectors, edges );
+    }
+
 }
 
 class Graph extends Shape {
@@ -271,7 +338,7 @@ const xoff = 250;
 const yoff = 250;
 const Z = -200;
 
-function project( shape, line_width ) {
+function project( shape, line_width, context ) {
     const N = shape.vectors.length;
     const copy = shape.copyVectors();
     var k;
@@ -280,13 +347,14 @@ function project( shape, line_width ) {
         shape.vectors[i].x = Math.abs(Z)/k * shape.vectors[i].x;
         shape.vectors[i].y = Math.abs(Z)/k * shape.vectors[i].y;
     }
-    shape.render( xoff, yoff, Z, line_width );
+    shape.render( xoff, yoff, Z, line_width, context );
     for ( var i = 0; i < N; i++ ) {
         shape.vectors[i].x = copy[i].x;
         shape.vectors[i].y = copy[i].y;
     }
 }
 
+// Boxes
 const box1 = new Box();
 box1.scale(100);
 box1.translateX(-50);
@@ -301,26 +369,48 @@ box2.translateY(-25);
 box2.translateZ(-25 - 50);
 box2.centerRot( 0, 0, 20 );
 
-/*
 const box3 = new Box();
 box3.scale(15);
 box3.translateX(-7.5);
 box3.translateY(-7.5);
 box3.translateZ(-7.5 - 50);
 box3.centerRot( 0, 0, 20 );
-*/
+
+// Spheres
+const sphere1 = new Sphere( 6,  25, 0.1 );
+sphere1.scale(90);
+
+const sphere2 = new Sphere( 7,  25, 0.15 );
+sphere2.scale(60);
+
+const sphere3 = new Sphere( 9,  25, 0.36 );
+sphere3.scale(25);
+
+sphere1.centerSelf();
+sphere2.centerSelf();
+sphere3.centerSelf();
 
 setInterval(() => {
 
-    ctx.beginPath();
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // Render cubes to first canvas
+    ctx1.clearRect(0, 0, cubeCanvas.width, cubeCanvas.height);
+    box1.centerRot( 0.5, 0.4, 0 );
+    box2.centerRot( 0.5, 0.4, 0 );
+    box3.centerRot( 0.5, 0.4, 0 );
+    project(box3, 0.75, ctx1 );
+    project(box2, 1, ctx1 );
+    project(box1, 3, ctx1 );
     
-    box1.centerRot( 0.05, 0.04, 0 );
-    box2.centerRot( 0.05, 0.04, 0 );
-    //box3.centerRot( 0.05, 0.04, 0 );
+    // Rander spheres to second canvas
+    ctx2.clearRect(0, 0, cubeCanvas.width, cubeCanvas.height);
+    project( sphere1, 0.2,  ctx2 );
+    project( sphere2, 0.5,  ctx2 );
+    project( sphere3, 1, ctx2 );
+    sphere1.centerRot( 0.5, -0.4, 0 );
+    sphere2.centerRot( 0.5, -0.4, 0 );
+    sphere3.centerRot( 0.5, -0.4, 0 );
 
-    //project(box3, 1);
-    project(box2, 2);
-    project(box1, 6);
-    
-}, 5 );
+}, 50 );
+
+
+
