@@ -377,13 +377,13 @@ box3.translateZ(-7.5 - 50);
 box3.centerRot( 0, 0, 20 );
 
 // Spheres
-const sphere1 = new Sphere( 6,  25, 0.1 );
+const sphere1 = new Sphere( 5,  25, 0.1 );
 sphere1.scale(90);
 
-const sphere2 = new Sphere( 7,  25, 0.15 );
+const sphere2 = new Sphere( 6,  25, 0.15 );
 sphere2.scale(60);
 
-const sphere3 = new Sphere( 9,  25, 0.36 );
+const sphere3 = new Sphere( 15,  25, 0.36 );
 sphere3.scale(25);
 
 sphere1.centerSelf();
@@ -405,7 +405,7 @@ setInterval(() => {
     ctx2.clearRect(0, 0, cubeCanvas.width, cubeCanvas.height);
     project( sphere1, 0.2,  ctx2 );
     project( sphere2, 0.5,  ctx2 );
-    project( sphere3, 1,    ctx2 );
+    project( sphere3, 1.25,    ctx2 );
     sphere1.centerRot( 0.5, -0.4, 0 );
     sphere2.centerRot( 0.5, -0.4, 0 );
     sphere3.centerRot( 0.5, -0.4, 0 );
