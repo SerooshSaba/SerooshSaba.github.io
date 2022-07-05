@@ -32,12 +32,9 @@ p {
 /* About */
 
 .profile-picture {
-    height: 200px;
-    width:  200px;
+    height: 190px;
+    width:  190px;
     margin-right: 50px;
-
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.15);
-    border-radius: 99px;
 }
 
 .hide {
@@ -71,7 +68,7 @@ p {
             flex-direction: row;
             
             height: auto;
-            width: 425px;
+            width: 400px;
 
             margin: 0px 30px 30px 0px;
             padding: 12.5px 10px 2.5px 25px;
@@ -128,8 +125,8 @@ p {
     }
 
     .skill-java {
-        height: 65px;
-        width:  65px;
+        height: 67.5px;
+        width:  67.5px;
         margin-left: -10px;
     }
 
@@ -156,15 +153,16 @@ p {
     }
 
     .skill-php {
-        height: 65px;
-        width:  70px;
+        height: 67.5px;
+        width:  80px;
+        transform: scale(1.1);
     }
 
 /* Experience */
 .erfaring-modul-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
 
     height: auto;
@@ -172,11 +170,11 @@ p {
     width: 100%;
     max-width: 1000px;
 
-    margin-top: 85px;
+    margin-top: 100px;
 }
     .erfaring-main-content {
         width: auto;
-        max-width: 1000px;
+        max-width: 725px;
     }
         .github-link {
             display: flex;
@@ -187,22 +185,28 @@ p {
             height: auto;
             width: 55px;
 
-            margin: 25px 0px 0px 0px;
-            padding: 10px 10px;
+            margin: 0px 27.5px 0px 0px;
+            padding: 10px 5px;
 
-            font-size: 12.5px;
+            font-size: 10px;
             color: white;
             background-color: rgb(10, 102, 194);
+            background-color: rgba(0,0,0,0.5);
             border-radius: 99px;
 
             cursor: pointer;
             user-select: none;
             text-decoration: none;
+            transition: 0.25s;
+        }
+
+        .github-link:hover {
+            background-color: rgba(0,0,0,1);
+            transition: 0.25s;
         }
 
         .gif {
-            border-radius: 7.5px;
-            transition: 0.25s;
+            border-radius: 3px;
         }
 
         .gif:hover {
@@ -257,8 +261,8 @@ p {
                 filter: grayscale(1);
             }
             .workbench-logo {
-                height: 25px;
-                width:  25px;
+                height: 28px;
+                width:  28px;
                 margin-left: 30px;
                 filter: grayscale(1);
             }
@@ -276,7 +280,7 @@ p {
             }
             .processing-logo {
                 height: 30px;
-                width:  30px;
+                width:  35px;
                 margin-left: 15px;
                 filter: grayscale(1);
             }
@@ -295,7 +299,7 @@ p {
 
     .period {
         height: auto;
-        color: rgba(0,0,0,0.5);
+        color: rgba(0,0,0,0.3);
         font-size: 14px;
     }
 

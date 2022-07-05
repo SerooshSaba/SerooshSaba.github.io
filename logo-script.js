@@ -234,7 +234,6 @@ class Sphere extends Shape {
 
     constructor( resolution, LVLS, step_size ) {
         
-
         var edges   = [];
         var vectors = [];
         var x, y, z;
@@ -383,7 +382,7 @@ sphere1.scale(90);
 const sphere2 = new Sphere( 6,  25, 0.15 );
 sphere2.scale(60);
 
-const sphere3 = new Sphere( 3, 30, 0.36 );
+const sphere3 = new Sphere( 2, 60, 0.15 );
 sphere3.scale(25);
 
 sphere1.centerSelf();
@@ -394,9 +393,9 @@ setInterval(() => {
 
     // Render cubes to first canvas
     ctx1.clearRect(0, 0, cubeCanvas.width, cubeCanvas.height);
-    box1.centerRot( 0.5, 0.4, 0 );
-    box2.centerRot( 0.5, 0.4, 0 );
-    box3.centerRot( 0.5, 0.4, 0 );
+    box1.centerRot( 0.25, 0.2, 0 );
+    box2.centerRot( 0.25, 0.2, 0 );
+    box3.centerRot( 0.25, 0.2, 0 );
     project(box3, 0.75, ctx1 );
     project(box2, 1,    ctx1 );
     project(box1, 3,    ctx1 );
@@ -409,5 +408,5 @@ setInterval(() => {
     sphere1.centerRot( 0.5, -0.4, 0 );
     sphere2.centerRot( 0.5, -0.4, 0 );
     sphere3.centerRot( 0.5, -0.4, 0 );
-
+    
 }, 30 );
