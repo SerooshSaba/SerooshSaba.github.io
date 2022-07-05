@@ -10,7 +10,7 @@ h2 {
 h3 {
     font-size: 25px;
     margin-bottom: 20px;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0,0,0,1);
 }
 
 .information {
@@ -36,7 +36,7 @@ p {
     width:  200px;
     margin-right: 50px;
 
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.25);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.15);
     border-radius: 99px;
 }
 
@@ -222,7 +222,14 @@ p {
 
         .tech-row > img {
             opacity: 0.4;
+            transition: 0.25s;
         }
+
+        .tech-row > img:hover {
+            opacity: 1;
+            transition: 0.25s;
+        }
+
             .python-logo {
                 height: 35px;
                 width:  35px;
