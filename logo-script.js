@@ -411,6 +411,3 @@ setInterval(() => {
     sphere3.centerRot( 0.5, -0.4, 0 );
 
 }, 25 );
-
-
-
