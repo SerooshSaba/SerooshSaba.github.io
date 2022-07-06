@@ -207,11 +207,11 @@ p {
 
         .gif {
             border-radius: 3px;
+            transition: 0.25s;
         }
 
         .gif:hover {
             transform: scale(1.25);
-            transition: 0.25s;
         }
 
         .tech-row {

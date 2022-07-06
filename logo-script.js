@@ -397,16 +397,16 @@ setInterval(() => {
     box2.centerRot( 0.25, 0.2, 0 );
     box3.centerRot( 0.25, 0.2, 0 );
     project(box3, 0.75, ctx1 );
-    project(box2, 1,    ctx1 );
-    project(box1, 3,    ctx1 );
+    project(box2, 1.25,    ctx1 );
+    project(box1, 4.00,    ctx1 );
     
     // Rander spheres to second canvas
     ctx2.clearRect(0, 0, cubeCanvas.width, cubeCanvas.height);
     project( sphere1, 0.25,  ctx2 );
     project( sphere2, 0.50,  ctx2 );
-    project( sphere3, 1.00,    ctx2 );
-    sphere1.centerRot( 0.5, -0.4, 0 );
-    sphere2.centerRot( 0.5, -0.4, 0 );
-    sphere3.centerRot( 0.5, -0.4, 0 );
+    project( sphere3, 1.50,    ctx2 );
+    sphere1.centerRot( 0.4, -0.3, 0 );
+    sphere2.centerRot( 0.4, -0.3, 0 );
+    sphere3.centerRot( 0.4, -0.3, 0 );
     
 }, 30 );
