@@ -376,7 +376,7 @@ box3.translateZ(-7.5 - 50);
 box3.centerRot( 0, 0, 20 );
 
 // Spheres
-const sphere1 = new Sphere( 75,  15, 0.1 );
+const sphere1 = new Sphere( 75,  15, 0.05 );
 sphere1.scale(90);
 
 const sphere2 = new Sphere( 6,  25, 0.15 );
@@ -403,7 +403,7 @@ setInterval(() => {
     // Rander spheres to second canvas
     ctx2.clearRect(0, 0, cubeCanvas.width, cubeCanvas.height);
     project( sphere1, 0.25,  ctx2 );
-    project( sphere2, 0.40,  ctx2 );
+    project( sphere2, 0.50,  ctx2 );
     project( sphere3, 1.00,    ctx2 );
     sphere1.centerRot( 0.5, -0.4, 0 );
     sphere2.centerRot( 0.5, -0.4, 0 );
