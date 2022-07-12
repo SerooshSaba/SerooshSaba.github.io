@@ -13,8 +13,6 @@ const skills_dot = document.getElementById("skills-dot");
 const projects_dot = document.getElementById("projects-dot");
 const experience_dot = document.getElementById("experience-dot");
 const contact_dot = document.getElementById("contact-dot");
-
-
 const alle_dots = [ about_dot, skills_dot, experience_dot, projects_dot, contact_dot ];
 
 // Sections
@@ -23,7 +21,6 @@ const skills_section = document.getElementById("skills-section");
 const projects_section = document.getElementById("projects-section");
 const experience_section = document.getElementById("experience-section");
 const contact_section = document.getElementById("contact-section");
-
 
 
 function isInViewPort(element) {
@@ -35,7 +32,6 @@ function isInViewPort(element) {
         return false;
     }
 }
-
 
 
 content.addEventListener('scroll', function (event) {
