@@ -411,4 +411,4 @@ setInterval(() => {
     sphere2.centerRot( 0.4, -0.3, 0 );
     sphere3.centerRot( 0.4, -0.3, 0 );
     
-}, 30 );
+}, 50 );
