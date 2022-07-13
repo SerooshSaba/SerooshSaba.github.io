@@ -355,10 +355,10 @@ function project( shape, line_width, context ) {
 
 // Boxes
 const box1 = new Box();
-box1.scale(100);
-box1.translateX(-50);
-box1.translateY(-50);
-box1.translateZ(-50 - 50);
+box1.scale(90);
+box1.translateX(-45);
+box1.translateY(-45);
+box1.translateZ(-45 - 50);
 box1.centerRot( 0, 0, 20 );
 
 const box2 = new Box();
@@ -378,16 +378,18 @@ box3.centerRot( 0, 0, 20 );
 // Spheres
 const sphere1 = new Sphere( 75,  15, 0.05 );
 sphere1.scale(90);
-
-const sphere2 = new Sphere( 6,  25, 0.15 );
+const sphere2 = new Sphere( 75,  15, 0.05 );
 sphere2.scale(60);
-
-const sphere3 = new Sphere( 2, 60, 0.15 );
+const sphere3 = new Sphere( 50,  15, 0.05 );
 sphere3.scale(25);
 
 sphere1.centerSelf();
 sphere2.centerSelf();
 sphere3.centerSelf();
+
+sphere1.translateZ(-50);
+sphere2.translateZ(-50);
+sphere3.translateZ(-50);
 
 setInterval(() => {
 
@@ -398,13 +400,13 @@ setInterval(() => {
     box3.centerRot( 0.25, 0.2, 0 );
     project(box3, 0.75, ctx1 );
     project(box2, 1.25,    ctx1 );
-    project(box1, 4.00,    ctx1 );
+    project(box1, 5.00,    ctx1 );
     
     // Rander spheres to second canvas
     ctx2.clearRect(0, 0, cubeCanvas.width, cubeCanvas.height);
-    project( sphere1, 0.25,  ctx2 );
-    project( sphere2, 0.50,  ctx2 );
-    project( sphere3, 1.50,    ctx2 );
+    project( sphere1, 0.20,  ctx2 );
+    project( sphere2, 0.35,  ctx2 );
+    project( sphere3, 0.75,  ctx2 );
     sphere1.centerRot( 0.4, -0.3, 0 );
     sphere2.centerRot( 0.4, -0.3, 0 );
     sphere3.centerRot( 0.4, -0.3, 0 );
